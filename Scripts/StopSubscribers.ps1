@@ -1,2 +1,2 @@
-docker stop kafka-consumer-1-1
-docker stop kafka-consumer-2-1
+docker stop kafka-consumer1-1
+docker stop kafka-consumer2-1

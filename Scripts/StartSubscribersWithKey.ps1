@@ -1,0 +1,2 @@
+docker start kafka_demo-consumer_with_key1-1
+docker start kafka_demo-consumer_with_key2-1

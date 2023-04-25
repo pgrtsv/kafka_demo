@@ -27,14 +27,44 @@ services:
     build: KafkaProducer
     depends_on:
       - kafka
+    profiles:
+      - basic
   consumer1:
     build: KafkaConsumer
     depends_on:
       - kafka
+    profiles:
+      - basic
   consumer2:
     build: KafkaConsumer
     depends_on:
       - kafka
+    profiles:
+      - basic
+  publisher_with_key:
+    build: 
+      context: .
+      dockerfile: ./KafkaProducerWithKey/Dockerfile
+    depends_on:
+      - kafka
+    profiles:
+      - with_key
+  consumer_with_key1:
+    build: 
+      context: .
+      dockerfile: ./KafkaConsumerWithKey/Dockerfile
+    depends_on:
+      - kafka
+    profiles:
+      - with_key
+  consumer_with_key2:
+    build:
+      context: .
+      dockerfile: ./KafkaConsumerWithKey/Dockerfile
+    depends_on:
+      - kafka
+    profiles:
+      - with_key
 
 volumes:
   kafka_data:

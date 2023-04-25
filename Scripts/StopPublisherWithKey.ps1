@@ -1,0 +1,1 @@
+docker stop kafka_demo-publisher_with_key-1

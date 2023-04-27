@@ -14,7 +14,7 @@ while (true)
     try
     {
         await producer.ProduceAsync("time", new() { Value = DateTime.Now.ToString(CultureInfo.InvariantCulture) });
-        logger.Information("Message sent.");
+        logger.Information("Message sent."); 
     }
     catch (Exception exception)
     {

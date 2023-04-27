@@ -32,13 +32,13 @@ services:
   consumer1:
     build: KafkaConsumer
     depends_on:
-      - kafka
+      - publisher
     profiles:
       - basic
   consumer2:
     build: KafkaConsumer
     depends_on:
-      - kafka
+      - publisher
     profiles:
       - basic
   publisher_with_key:
